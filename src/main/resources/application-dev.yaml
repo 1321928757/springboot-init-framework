@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: lsj20030222
+      url: jdbc:mysql://localhost:3306/luckysj?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+  #redis缓存服务器配置154.12.95.154
+  redis:
+    host: 123123
+    port: 6379
+    password: 123123
+    jedis:
+      pool:
+        #最大连接数据库连接数,设 0 为没有限制
+        max-active: 8
+        #最大等待连接中的数量,设 0 为没有限制
+        max-idle: 8
+        #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+        max-wait: 5000ms
+        #最小等待连接中的数量,设 0 为没有限制
+        min-idle: 0
+#redisson配置
+redis:
+  sdk:
+    config:
+      host: 123123
+      port: 6379
+      pool-size: 10
+      min-idle-size: 5
+      idle-timeout: 30000
+      connect-timeout: 5000
+      retry-attempts: 3
+      retry-interval: 1000
+      ping-interval: 60000
+      keep-alive: true
+      password: 123123

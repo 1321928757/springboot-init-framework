@@ -1,0 +1,19 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8087
+mybatis-plus:
+  config-location: classpath:mybatis-config.xml #标注mybatis配置文件的位置
+  mapper-locations: classpath*:/mapper/*.xml #标注待解析的mapper的xml文件位置
+  type-aliases-package: com.luckysj.springbootinit.model #标注实体类位置
+  #  configuration:   #这个配置了mybatis-config.xml文件,就不能在这里写配置
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      id-type: assign_id #自增策略
+
+
+
